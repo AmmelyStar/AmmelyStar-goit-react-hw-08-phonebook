@@ -1,16 +1,19 @@
+
+import Navigation from './Navigation/Navigation';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+
+
 export const App = () => {
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Router>
+        <Navigation />
+     
+    </Router>
+    </>
   );
 };
+
+export default App;

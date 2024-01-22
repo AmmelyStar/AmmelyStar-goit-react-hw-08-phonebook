@@ -111,3 +111,19 @@ GitHub.
 3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
    отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
    скрипта будет указано в чем проблема.
+
+## install
+
+- npm install styled-components@5.3.10
+
+- npm i react-redux
+
+- npm i redux-persist
+
+- npm i @reduxjs/toolkit
+
+- npm install redux
+
+- npm install @redux-devtools/extension
+
+- npm i axios
