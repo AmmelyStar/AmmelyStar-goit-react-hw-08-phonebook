@@ -80,6 +80,7 @@ const ContactForm = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
         gap: theme => theme.spacing(3),
         maxWidth: 400,
         margin: 'auto',
@@ -92,12 +93,17 @@ const ContactForm = () => {
     >
       <Typography
         variant="h1"
-        style={{ fontWeight: 600, fontSize: 32, textAlign: 'center' }}
+        style={{
+          fontWeight: 600,
+          fontSize: 32,
+          textAlign: 'center',
+          marginBottom: '20px', // додано властивість для відступу
+        }}
       >
         Phonebook
       </Typography>
       <TextField
-        sx={{ width: '70%', margin: 'auto' }}
+        sx={{ width: '70%', marginLeft: '100px' }}
         label="Name"
         type="text"
         name="name"
@@ -107,7 +113,12 @@ const ContactForm = () => {
         variant="outlined"
       />
       <TextField
-        sx={{ width: '70%', margin: 'auto' }}
+        sx={{
+          marginLeft: '100px',
+          width: '70%', // розширено ширину
+
+          marginTop: '10px', // додано властивість для відступу зверху
+        }}
         label="Number"
         type="tel"
         name="number"
@@ -120,9 +131,11 @@ const ContactForm = () => {
         type="submit"
         variant="contained"
         sx={{
-          width: '70%',
+          marginLeft: '300px',
+          width: '20%', // розширено ширину
           backgroundColor: theme => theme.palette.secondary.main,
           color: '#fff',
+          marginTop: '10px', // додано властивість для відступу зверху
           '&:hover': {
             backgroundColor: theme => theme.palette.secondary.main,
           },

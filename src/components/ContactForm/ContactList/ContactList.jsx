@@ -61,7 +61,7 @@ const ContactList = () => {
               onClick={() => handleDeleteContact(contact.id)}
               sx={{
                 margin: '40px',
-                textAlign: 'center',
+                textAlign: 'end',
                 backgroundColor: 'secondary.main',
                 color: '#fff',
                 '&:hover': {

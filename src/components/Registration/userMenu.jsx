@@ -38,26 +38,26 @@ const UserMenu = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#129cd6',
+        textAlign: 'center', 
+        backgroundColor: 'secondary.main',
         border: 'none',
         color: '#fff',
-        maxHeight: '100px',
-        width: 300,
+        maxHeight: '20px',
+        width: 100,
         margin: 2,
         position: 'fixed',
         top: 0,
-        right: -20,
+        right: -10,
         zIndex: 0,
       }}
     >
       {loading ? (
-        <CircularProgress style={{ color: '#fff' }} />
+        <CircularProgress style={{ color: '#fff', fontSize: '16px' }} />
       ) : isAuthenticated ? (
         <>
-          <Typography
-            variant="h6"
-            sx={{ marginBottom: theme => theme.spacing(2) }}
-          >
+            <Typography sx={{
+              marginBottom: theme => theme.spacing(-2)
+            }}>
             Welcome, {user?.name || 'User'}!
           </Typography>
           <Button
@@ -66,7 +66,7 @@ const UserMenu = () => {
             onClick={handleLogout}
             sx={{
               marginTop: theme => theme.spacing(2),
-              backgroundColor: '#3b52b2',
+              backgroundColor: 'secondary.main',
               color: '#fff',
               borderRadius: 20,
               '&:hover': {

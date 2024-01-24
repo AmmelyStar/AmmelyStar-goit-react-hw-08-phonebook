@@ -18,7 +18,7 @@ const Filter = () => {
       sx={{
         width: '100%',
         maxWidth: 300,
-        margin: 'auto',
+        marginLeft: '300px',
         marginBottom: theme => theme.spacing(2),
         '& input::placeholder': {
           paddingLeft: theme => theme.spacing(1),
