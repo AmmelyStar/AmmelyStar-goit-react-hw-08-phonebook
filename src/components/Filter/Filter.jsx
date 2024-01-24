@@ -1,35 +1,43 @@
 import React from 'react';
-import css from './style.module.css'
-
 import { useDispatch, useSelector } from 'react-redux';
-import { filterContacts } from '../../redux/filterSlice';
+import { updateFilter } from '../../redux/contactsSlice';
+import InputAdornment from '@mui/material/InputAdornment';
+import TextField from '@mui/material/TextField';
+import SearchIcon from '@mui/icons-material/Search';
 
-
-export const Filter = () => {
-  const filter = useSelector(state => state.filter.filter);
-
+const Filter = () => {
   const dispatch = useDispatch();
+  const filter = useSelector(state => state.contacts.filter) || '';
 
-  const changeFilter = e => {
-    dispatch(filterContacts(e.target.value));
+  const handleFilterChange = e => {
+    dispatch(updateFilter(e.target.value.toLowerCase()));
   };
 
   return (
-    <>
-      <div  className={css.container}>
-        <h3 className={css.subtitle}>Find contacts by name</h3>
-
-        <input className={css.fild}
-          name="filter"
-          value={filter}
-          type="text"
-          onChange={changeFilter}
-        />
-      </div>
-    </>
+    <TextField
+      sx={{
+        width: '100%',
+        maxWidth: 300,
+        margin: 'auto',
+        marginBottom: theme => theme.spacing(2),
+        '& input::placeholder': {
+          paddingLeft: theme => theme.spacing(1),
+        },
+      }}
+      type="text"
+      placeholder="Search contacts"
+      variant="outlined"
+      value={filter}
+      onChange={handleFilterChange}
+      InputProps={{
+        startAdornment: (
+          <InputAdornment position="start">
+            <SearchIcon />
+          </InputAdornment>
+        ),
+      }}
+    />
   );
 };
-
-
 
 export default Filter;
