@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AmmelyStar-goit-react-hw-08-phonebook/static/css/main.7acaea2f.css",
+    "main.js": "/AmmelyStar-goit-react-hw-08-phonebook/static/js/main.a675d50c.js",
+    "index.html": "/AmmelyStar-goit-react-hw-08-phonebook/index.html",
+    "main.7acaea2f.css.map": "/AmmelyStar-goit-react-hw-08-phonebook/static/css/main.7acaea2f.css.map",
+    "main.a675d50c.js.map": "/AmmelyStar-goit-react-hw-08-phonebook/static/js/main.a675d50c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.a675d50c.js"
+  ]
+}
